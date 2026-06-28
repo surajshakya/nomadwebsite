@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#232a24">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#232a24"/>
+    <path d="M0 560 L300 430 L560 530 L840 380 L1200 520 L1200 800 L0 800 Z" fill="#2f5740"/>
+    <path d="M0 640 L360 540 L660 610 L960 500 L1200 590 L1200 800 L0 800 Z" fill="#3f6b4f"/>
+    <circle cx="940" cy="250" r="64" fill="#cfe3d3"/>
+    <text x="600" y="430" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="120" fill="#fbfcf9">Nomad</text>
+    <text x="600" y="486" text-anchor="middle" font-family="monospace" font-size="26" letter-spacing="10" fill="#9cc6a8">ECO-RETREAT · KUFRI</text>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;}
+    body{margin:0;background:#eef0ea;}
+    ::selection{background:#3f6b4f;color:#fbfcf9;}
+  </style>
+</helmet>
+
+<div style="{{ themeVars }}">
+<div style="font-family:'Hanken Grotesk',system-ui,sans-serif;color:var(--text,#20271f);background:var(--page,#eef0ea);-webkit-font-smoothing:antialiased;overflow-x:hidden;">
+
+  <!-- ===================== HERO ===================== -->
+  <section style="position:relative;height:94vh;min-height:620px;width:100%;overflow:hidden;">
+
+    <!-- slide 0 -->
+    <div style="position:absolute;inset:0;z-index:{{ z0 }};opacity:{{ op0 }};transition:opacity 1.1s ease;">
+      <img src="images/forest-walk.jpg" alt="Walking through the deodar forest at Nomad" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;inset:0;background:{{ scrim }};"></div>
+    </div>
+    <!-- slide 1 -->
+    <div style="position:absolute;inset:0;z-index:{{ z1 }};opacity:{{ op1 }};transition:opacity 1.1s ease;">
+      <img src="images/reading-hillside.jpg" alt="Reading on the hillside with Himalayan views" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;inset:0;background:{{ scrim }};"></div>
+    </div>
+
+    <!-- nav -->
+    <header style="position:absolute;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:26px clamp(20px,5vw,64px);">
+      <a href="#" style="text-decoration:none;color:#faf6ee;display:flex;flex-direction:column;line-height:1;">
+        <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:24px;letter-spacing:-.02em;">Nomad</span>
+        <span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;opacity:.75;margin-top:4px;">Eco-Retreat · Kufri</span>
+      </a>
+      <nav style="display:flex;align-items:center;gap:28px;">
+        <a href="#workshops" style="text-decoration:none;color:rgba(250,246,238,.88);font-size:14.5px;font-weight:500;" style-hover="color:#faf6ee;">Workshops &amp; Retreats</a>
+        <a href="#stay" style="text-decoration:none;color:rgba(250,246,238,.88);font-size:14.5px;font-weight:500;" style-hover="color:#faf6ee;">Stay With Us</a>
+        <a href="#serai" style="text-decoration:none;color:rgba(250,246,238,.88);font-size:14.5px;font-weight:500;" style-hover="color:#faf6ee;">Serai Residency</a>
+        <a href="#about" style="text-decoration:none;color:rgba(250,246,238,.88);font-size:14.5px;font-weight:500;" style-hover="color:#faf6ee;">About Us</a>
+        <a href="#partner" style="text-decoration:none;color:rgba(250,246,238,.88);font-size:14.5px;font-weight:500;" style-hover="color:#faf6ee;">Partner With Us</a>
+        <a href="#contact" style="text-decoration:none;color:#23201b;background:#faf6ee;padding:10px 18px;border-radius:999px;font-size:14px;font-weight:600;" style-hover="background:#fff;">Contact Us</a>
+      </nav>
+    </header>
+
+    <!-- hero text -->
+    <div style="position:absolute;left:0;right:0;bottom:0;z-index:15;padding:clamp(28px,5vw,64px);padding-bottom:clamp(56px,7vw,96px);">
+      <div style="max-width:920px;">
+        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--heroEye,#cfe3d3);">{{ eyebrow }}</span>
+        <h1 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;color:#faf6ee;font-size:clamp(40px,6.2vw,82px);line-height:.98;letter-spacing:-.02em;margin:18px 0 0;text-wrap:balance;">{{ title }}</h1>
+        <p style="color:rgba(250,246,238,.85);font-size:clamp(16px,1.5vw,20px);line-height:1.5;max-width:560px;margin:22px 0 0;">{{ sub }}</p>
+      </div>
+    </div>
+
+    <!-- slider controls -->
+    <div style="position:absolute;right:clamp(28px,5vw,64px);bottom:clamp(56px,7vw,96px);z-index:18;display:flex;align-items:center;gap:18px;">
+      <div style="display:flex;gap:9px;align-items:center;">
+        <button onClick="{{ go0 }}" aria-label="Slide 1" style="width:28px;height:3px;border:none;padding:0;cursor:pointer;background:{{ dot0 }};transition:background .4s ease;"></button>
+        <button onClick="{{ go1 }}" aria-label="Slide 2" style="width:28px;height:3px;border:none;padding:0;cursor:pointer;background:{{ dot1 }};transition:background .4s ease;"></button>
+      </div>
+      <div style="display:flex;gap:10px;">
+        <button onClick="{{ prev }}" aria-label="Previous" style="width:46px;height:46px;border-radius:999px;border:1px solid rgba(250,246,238,.5);background:transparent;color:#faf6ee;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;" style-hover="background:rgba(250,246,238,.14);">‹</button>
+        <button onClick="{{ next }}" aria-label="Next" style="width:46px;height:46px;border-radius:999px;border:1px solid rgba(250,246,238,.5);background:transparent;color:#faf6ee;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;" style-hover="background:rgba(250,246,238,.14);">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INTRO ===================== -->
+  <section id="about" style="background:var(--page,#eef0ea);padding:clamp(64px,9vw,128px) clamp(20px,5vw,64px);">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(36px,5vw,80px);align-items:start;">
+      <div>
+        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accentDeep,#2f5740);">Nomad Eco-Retreat</span>
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(30px,3.8vw,52px);line-height:1.04;letter-spacing:-.02em;margin:18px 0 0;text-wrap:balance;">An apple orchard in the deodar forest, where the Himalayas begin.</h2>
+      </div>
+      <div style="padding-top:8px;">
+        <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.65;color:var(--text2,#51594e);margin:0;">Set in Kufri and surrounded by deodar forests with majestic views of the snow-capped Himalayas, Nomad is a place to slow down and make. Stay in traditional mud cottages, Swiss tents and basic tents; gather in our open-air Baithak and Café Lounge over local Himachali food, good coffee and organic drinks.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;">
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--chipInk,#4f6b54);border:1px solid var(--chipLine,#c4d0c6);border-radius:999px;padding:8px 15px;">Kufri · 2,500m</span>
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--chipInk,#4f6b54);border:1px solid var(--chipLine,#c4d0c6);border-radius:999px;padding:8px 15px;">Apple orchard</span>
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--chipInk,#4f6b54);border:1px solid var(--chipLine,#c4d0c6);border-radius:999px;padding:8px 15px;">Deodar forest</span>
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--chipInk,#4f6b54);border:1px solid var(--chipLine,#c4d0c6);border-radius:999px;padding:8px 15px;">Partial wheelchair access</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STAY WITH US ===================== -->
+  <section id="stay" style="background:var(--alt,#e0e6dd);padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:44px;">
+        <div>
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accentDeep,#2f5740);">Stay With Us</span>
+          <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(28px,3.6vw,46px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 0;">Three ways to sleep under the deodars</h2>
+        </div>
+        <a href="#" style="text-decoration:none;color:var(--text,#20271f);font-weight:600;font-size:15px;border-bottom:2px solid var(--accent,#3f6b4f);padding-bottom:3px;white-space:nowrap;">Check availability →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+
+        <article style="background:var(--paper,#fbfcf9);border-radius:6px;overflow:hidden;border:1px solid var(--cardLine,#d2dcd4);" style-hover="transform:translateY(-4px);">
+          <div style="aspect-ratio:4/3;overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=800&q=70" alt="Traditional cottage in the forest" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div style="padding:24px;">
+            <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:22px;margin:0;">Mud Cottages</h3>
+            <p style="font-size:15px;line-height:1.55;color:var(--text2,#51594e);margin:10px 0 0;">Hand-built traditional cottages, warm and grounded, with murals and orchard views.</p>
+          </div>
+        </article>
+
+        <article style="background:var(--paper,#fbfcf9);border-radius:6px;overflow:hidden;border:1px solid var(--cardLine,#d2dcd4);" style-hover="transform:translateY(-4px);">
+          <div style="aspect-ratio:4/3;overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=70" alt="Comfortable canvas tent interior with a bed and a view" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div style="padding:24px;">
+            <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:22px;margin:0;">Swiss Tents</h3>
+            <p style="font-size:15px;line-height:1.55;color:var(--text2,#51594e);margin:10px 0 0;">Comfortable canvas tents with proper beds — camp under the stars without roughing it.</p>
+          </div>
+        </article>
+
+        <article style="background:var(--paper,#fbfcf9);border-radius:6px;overflow:hidden;border:1px solid var(--cardLine,#d2dcd4);" style-hover="transform:translateY(-4px);">
+          <div style="aspect-ratio:4/3;overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1517824806704-9040b037703b?w=800&q=70" alt="A tent under a starlit mountain sky" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div style="padding:24px;">
+            <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:22px;margin:0;">Basic Tents</h3>
+            <p style="font-size:15px;line-height:1.55;color:var(--text2,#51594e);margin:10px 0 0;">Simple, light-on-the-land shelter for travellers who want to wake with the mountains.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERAI RESIDENCY ===================== -->
+  <section id="serai" style="background:var(--ink,#232a24);color:#f3ece0;padding:clamp(64px,9vw,128px) clamp(20px,5vw,64px);">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,72px);align-items:center;">
+      <div style="aspect-ratio:5/4;border-radius:6px;overflow:hidden;">
+        <img src="images/reading-hillside.jpg" alt="A resident reading on the hillside" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div>
+        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accentSoft,#9cc6a8);">The Serai Residency</span>
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(30px,3.8vw,52px);line-height:1.04;letter-spacing:-.02em;margin:16px 0 0;text-wrap:balance;">Time, space and mountain light to go deep.</h2>
+        <p style="font-size:clamp(16px,1.4vw,18px);line-height:1.65;color:rgba(243,236,224,.8);margin:20px 0 0;max-width:520px;">Our long-form residency gives makers room to work away from the noise — a studio, a community of artists, and the orchard outside the door. Open to artists across disciplines, year-round.</p>
+        <div style="display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;">
+          <a href="#" style="text-decoration:none;background:var(--accent,#3f6b4f);color:#faf6ee;padding:14px 26px;border-radius:999px;font-weight:600;font-size:15px;" style-hover="background:var(--accentHi,#4a7d5c);">Apply to the residency</a>
+          <a href="#" style="text-decoration:none;border:1px solid rgba(243,236,224,.4);color:#f3ece0;padding:14px 26px;border-radius:999px;font-weight:600;font-size:15px;" style-hover="background:rgba(243,236,224,.1);">How it works</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WORKSHOPS & RETREATS ===================== -->
+  <section id="workshops" style="background:var(--page,#eef0ea);padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="max-width:680px;">
+        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accentDeep,#2f5740);">Workshops &amp; Retreats</span>
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(28px,3.6vw,46px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 0;text-wrap:balance;">Gather, learn and create — through the year.</h2>
+        <p style="font-size:clamp(16px,1.4vw,18px);line-height:1.65;color:var(--text2,#51594e);margin:18px 0 0;">We host and organize hands-on workshops and slow retreats in the orchard and the open-air Baithak — led by visiting artists and makers.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;">
+        <a href="#" style="text-decoration:none;color:inherit;display:block;background:var(--paper,#fbfcf9);border:1px solid var(--cardLine,#d2dcd4);border-radius:6px;overflow:hidden;" style-hover="transform:translateY(-4px);">
+          <div style="aspect-ratio:16/10;overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=800&q=70" alt="Natural dye and textile" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div style="padding:22px;">
+            <span style="font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--chipInk,#4f6b54);">3 days · spring</span>
+            <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:20px;margin:8px 0 0;">Natural Dye &amp; Textile</h3>
+          </div>
+        </a>
+        <a href="#" style="text-decoration:none;color:inherit;display:block;background:var(--paper,#fbfcf9);border:1px solid var(--cardLine,#d2dcd4);border-radius:6px;overflow:hidden;" style-hover="transform:translateY(-4px);">
+          <div style="aspect-ratio:16/10;overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=70" alt="Plein-air painting" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div style="padding:22px;">
+            <span style="font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--chipInk,#4f6b54);">5 days · summer</span>
+            <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:20px;margin:8px 0 0;">Plein-Air Painting Retreat</h3>
+          </div>
+        </a>
+        <a href="#" style="text-decoration:none;color:inherit;display:block;background:var(--paper,#fbfcf9);border:1px solid var(--cardLine,#d2dcd4);border-radius:6px;overflow:hidden;" style-hover="transform:translateY(-4px);">
+          <div style="aspect-ratio:16/10;overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=70" alt="Clay and hand-building" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div style="padding:22px;">
+            <span style="font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--chipInk,#4f6b54);">weekend · autumn</span>
+            <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:20px;margin:8px 0 0;">Clay &amp; Hand-Building</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCES ===================== -->
+  <section style="background:var(--cool,#dde4e4);padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="max-width:620px;margin-bottom:44px;">
+        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--chipInk,#4f6b54);">Life at Nomad</span>
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(28px,3.6vw,46px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 0;">Things to do between making.</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--coolLine,#c2ccc9);border:1px solid var(--coolLine,#c2ccc9);border-radius:6px;overflow:hidden;">
+        <div style="background:var(--coolTile,#eaefed);padding:30px;">
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:19px;margin:0;">Library</h3>
+          <p style="font-size:14.5px;line-height:1.55;color:var(--coolInk,#4d5854);margin:8px 0 0;">Browse and borrow — read by the window or under a tree.</p>
+        </div>
+        <div style="background:var(--coolTile,#eaefed);padding:30px;">
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:19px;margin:0;">Murals</h3>
+          <p style="font-size:14.5px;line-height:1.55;color:var(--coolInk,#4d5854);margin:8px 0 0;">Hand-painted walls throughout the retreat, made on-site.</p>
+        </div>
+        <div style="background:var(--coolTile,#eaefed);padding:30px;">
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:19px;margin:0;">Movie Nights</h3>
+          <p style="font-size:14.5px;line-height:1.55;color:var(--coolInk,#4d5854);margin:8px 0 0;">Open-air screenings under the orchard sky.</p>
+        </div>
+        <div style="background:var(--coolTile,#eaefed);padding:30px;">
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:19px;margin:0;">Stargazing &amp; Bonfire</h3>
+          <p style="font-size:14.5px;line-height:1.55;color:var(--coolInk,#4d5854);margin:8px 0 0;">Warm up by the fire and watch a clear Himalayan sky.</p>
+        </div>
+        <div style="background:var(--coolTile,#eaefed);padding:30px;">
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:19px;margin:0;">Live Music</h3>
+          <p style="font-size:14.5px;line-height:1.55;color:var(--coolInk,#4d5854);margin:8px 0 0;">Evenings of sound in the Baithak and around the fire.</p>
+        </div>
+        <div style="background:var(--coolTile,#eaefed);padding:30px;">
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:19px;margin:0;">Café Lounge</h3>
+          <p style="font-size:14.5px;line-height:1.55;color:var(--coolInk,#4d5854);margin:8px 0 0;">Local Himachali cuisine, good coffee and organic drinks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PARTNER WITH US ===================== -->
+  <section id="partner" style="background:var(--accent,#3f6b4f);color:#faf6ee;padding:clamp(56px,8vw,104px) clamp(20px,5vw,64px);">
+    <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:36px;flex-wrap:wrap;">
+      <div style="max-width:640px;">
+        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,246,238,.75);">Partner With Us</span>
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(28px,3.6vw,48px);line-height:1.04;letter-spacing:-.02em;margin:14px 0 0;text-wrap:balance;">Bring your residency, brand or retreat to the mountains.</h2>
+      </div>
+      <a href="#contact" style="text-decoration:none;background:#faf6ee;color:#23201b;padding:16px 30px;border-radius:999px;font-weight:600;font-size:16px;white-space:nowrap;" style-hover="background:#fff;">Start a conversation →</a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER / CONTACT ===================== -->
+  <footer id="contact" style="background:var(--footer,#1b211c);color:var(--ftext,#c4ccc4);padding:clamp(56px,7vw,88px) clamp(20px,5vw,64px) 36px;">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;">
+      <div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:26px;color:#faf6ee;">Nomad</div>
+        <p style="font-size:14.5px;line-height:1.6;color:var(--fmuted,#7c857c);margin:14px 0 0;max-width:300px;">An eco-retreat and artist residency in an apple orchard at Kufri, Himachal Pradesh.</p>
+      </div>
+      <div>
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--fmuted,#7c857c);margin-bottom:16px;">Explore</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <a href="#workshops" style="text-decoration:none;color:var(--ftext,#c4ccc4);font-size:15px;" style-hover="color:#faf6ee;">Workshops &amp; Retreats</a>
+          <a href="#stay" style="text-decoration:none;color:var(--ftext,#c4ccc4);font-size:15px;" style-hover="color:#faf6ee;">Stay With Us</a>
+          <a href="#serai" style="text-decoration:none;color:var(--ftext,#c4ccc4);font-size:15px;" style-hover="color:#faf6ee;">Serai Residency</a>
+          <a href="#about" style="text-decoration:none;color:var(--ftext,#c4ccc4);font-size:15px;" style-hover="color:#faf6ee;">About Us</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--fmuted,#7c857c);margin-bottom:16px;">Contact Us</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font-size:15px;">
+          <a href="mailto:hello@nomadretreat.in" style="text-decoration:none;color:var(--ftext,#c4ccc4);" style-hover="color:#faf6ee;">hello@nomadretreat.in</a>
+          <span style="color:var(--fmuted,#7c857c);">Kufri, Shimla, Himachal Pradesh</span>
+          <a href="#" style="text-decoration:none;color:var(--ftext,#c4ccc4);" style-hover="color:#faf6ee;">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1180px;margin:48px auto 0;padding-top:24px;border-top:1px solid var(--fline,#313a32);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <span style="font-size:13px;color:var(--fmuted,#7c857c);">© 2026 Nomad Eco-Retreat</span>
+      <span style="font-family:ui-monospace,Menlo,monospace;font-size:11.5px;letter-spacing:.1em;color:var(--fmuted,#7c857c);">Partial wheelchair access · Built with care in the hills</span>
+    </div>
+  </footer>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;100%&quot;},&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;deodar&quot;,&quot;clay&quot;,&quot;twilight&quot;],&quot;default&quot;:&quot;deodar&quot;,&quot;tsType&quot;:&quot;'deodar'|'clay'|'twilight'&quot;},&quot;autoplay&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;slideInterval&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:6,&quot;min&quot;:3,&quot;max&quot;:12,&quot;step&quot;:1,&quot;tsType&quot;:&quot;number&quot;},&quot;heroScrim&quot;:{&quot;editor&quot;:&quot;float&quot;,&quot;default&quot;:0.45,&quot;min&quot;:0,&quot;max&quot;:0.8,&quot;step&quot;:0.02,&quot;tsType&quot;:&quot;number&quot;}}">
+class Component extends DCLogic {
+  state = { index: 0 };
+
+  componentDidMount() { this.start(); }
+  componentWillUnmount() { clearInterval(this.timer); }
+
+  start() {
+    clearInterval(this.timer);
+    const autoplay = this.props.autoplay ?? true;
+    if (autoplay) {
+      const sec = this.props.slideInterval ?? 6;
+      this.timer = setInterval(() => this.next(), sec * 1000);
+    }
+  }
+  next() { this.setState(s => ({ index: (s.index + 1) % 2 })); }
+  prev() { this.setState(s => ({ index: (s.index + 1) % 2 })); }
+  go(i) { this.setState({ index: i }); this.start(); }
+
+  themeFor(name) {
+    const themes = {
+      deodar: {
+        '--page':'#eef0ea','--alt':'#e0e6dd','--ink':'#232a24','--paper':'#fbfcf9','--text':'#20271f','--text2':'#51594e',
+        '--accent':'#3f6b4f','--accentHi':'#4a7d5c','--accentDeep':'#2f5740','--accentSoft':'#9cc6a8','--heroEye':'#cfe3d3',
+        '--cool':'#dde4e4','--coolTile':'#eaefed','--coolLine':'#c2ccc9','--coolInk':'#4d5854',
+        '--cardLine':'#d2dcd4','--chipLine':'#c4d0c6','--chipInk':'#4f6b54',
+        '--footer':'#1b211c','--ftext':'#c4ccc4','--fmuted':'#7c857c','--fline':'#313a32',
+      },
+      clay: {
+        '--page':'#efe7da','--alt':'#e7dcca','--ink':'#2f2a22','--paper':'#faf6ee','--text':'#2a241d','--text2':'#5a5247',
+        '--accent':'#b65f3c','--accentHi':'#c96b46','--accentDeep':'#9c4e30','--accentSoft':'#e8a878','--heroEye':'#e8c9a6',
+        '--cool':'#dfe2d4','--coolTile':'#eef0e6','--coolLine':'#c9cdb8','--coolInk':'#5f6457',
+        '--cardLine':'#ddd0b8','--chipLine':'#cdbfa6','--chipInk':'#5f6b50',
+        '--footer':'#231f19','--ftext':'#cfc7b8','--fmuted':'#9c9485','--fline':'#38322a',
+      },
+      twilight: {
+        '--page':'#efe9ee','--alt':'#e6dde6','--ink':'#271f2d','--paper':'#fbf7fa','--text':'#2a232b','--text2':'#5b5260',
+        '--accent':'#8a4a63','--accentHi':'#9d5874','--accentDeep':'#6e3a4f','--accentSoft':'#d8a9bd','--heroEye':'#e7c9d6',
+        '--cool':'#dcd9e6','--coolTile':'#ece9f2','--coolLine':'#c5c0d2','--coolInk':'#565067',
+        '--cardLine':'#ddd3df','--chipLine':'#cfc6d6','--chipInk':'#6e5d72',
+        '--footer':'#201a26','--ftext':'#cbc2d0','--fmuted':'#8b8194','--fline':'#342c3a',
+      },
+    };
+    return themes[name] || themes.deodar;
+  }
+
+  renderVals() {
+    const i = this.state.index;
+    const slides = [
+      { eyebrow: 'An eco-retreat in the deodar forest', title: 'Make your best work where the Himalayas begin.', sub: 'Studios in an apple orchard at Kufri — surrounded by deodar forests and snow-capped peaks.' },
+      { eyebrow: 'The Serai Residency', title: 'Time, space and mountain light.', sub: 'Long-form residencies for makers — a room of your own with the orchard outside the door.' },
+    ];
+    const s = slides[i];
+    const scrimAmt = this.props.heroScrim ?? 0.45;
+    const scrim = `linear-gradient(180deg, rgba(20,18,14,0.12) 0%, rgba(20,18,14,${scrimAmt}) 60%, rgba(20,18,14,${Math.min(scrimAmt + 0.28, 0.88)}) 100%)`;
+    const dot = n => (n === i ? '#faf6ee' : 'rgba(250,246,238,0.4)');
+    return {
+      themeVars: this.themeFor(this.props.theme ?? 'deodar'),
+      eyebrow: s.eyebrow, title: s.title, sub: s.sub,
+      op0: i === 0 ? '1' : '0', op1: i === 1 ? '1' : '0',
+      z0: i === 0 ? 2 : 1, z1: i === 1 ? 2 : 1,
+      dot0: dot(0), dot1: dot(1),
+      scrim,
+      next: () => this.next(), prev: () => this.prev(),
+      go0: () => this.go(0), go1: () => this.go(1),
+    };
+  }
+}
+</script>
+</body>
+</html>
